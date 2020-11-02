@@ -13,19 +13,19 @@ Java has been one of the most popular programming languages in the world for ove
 
 ![Nanodegree-Certification](nd-grad-cert-jwd.png)
 
-## Spring Boot Basics
+### Spring Boot Basics
 Learn the fundamentals of Java while being introduced to a Spring Boot framework and associated integrations and plugins.
 * Project: BUILD A WEB-BASED PERSONAL STORAGE APPLICATION
 
-Web Services and APIs
+### Web Services and APIs
 Explore the differences between web services, APIs, and microservices. Develop REST and GraphQL APIs, and learn how to secure, consume, document, and test those APIs and web services.
 * Project: BUILD THE BACK-END SYSTEM FOR A CAR WEBSITE
 
-## Data Stores & Persistence
+### Data Stores & Persistence
 Build applications that read and write to relational databases using both the Java Persistence API (JPA) and SQL. Use standard design patterns to make your persistence layer easy to test and integrate with a Spring Boot application
 * Project: DESIGN THE DATA MODEL FOR A SAAS APPLICATION
 
-## Security and DevOps
+### Security and DevOps
 Learn about Git, version control, and best practices for authorization and authentication. Use Jenkins to build a CI/CD pipeline to deploy code to production.
 * Project: IMPLEMENT AUTHORIZATION FOR AN ECOMMERCE APPLICATION
 
