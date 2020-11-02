@@ -1,0 +1,50 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header-jumbotron {
+    margin: 0px;
+}
+
+.bar-section-1 {
+    padding: 20vh;
+    width: 100%;
+}
+
+.text-white {
+    color: white;
+}
+
+.wallpaper-box-1 {
+    background-image: url(/img/cloud_computing_large.jpg);
+    padding: 30vh;
+    width: 100%;
+}
+
+.dimmer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.fill {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/styles.css}">
+
+    <title>Sign up</title>
+  </head>
+  <body class="bg-light text-black">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">
+        <!--        <img src="/bin/img/app-logo.png" width="30" height="30" class="transition rotating d-inline-block align-top" alt="">-->
+        SuperDuperDrive
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav" id="user-main-nav">
+          <a class="nav-item nav-link" href="/login">Log In</a>
+          <a class="nav-item nav-link" href="/signup">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container justify-content-center w-50 p-3" style="background-color: #eeeeee; margin-top: 5em;">
+      <h1 class="display-5">Sign Up</h1>
+      <div id="usernameIsTaken" class="alert alert-danger" th:if="${usernameIsTaken}">
+        Username is taken, please choose another.
+      </div>
+      <div id="usersPostError" class="alert alert-danger" th:if="${usersPostError}">
+        Signup unsuccessful; something went wrong...
+      </div>
+
+      <div th:if="${signupErrorMessage}" class="alert alert-danger">
+        <span th:text="${signupErrorMessage}"></span>
+      </div>
+      <form th:object="${userSignupDto}" th:action="@{/users}" method="POST">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputFirstName">First Name</label>
+            <input th:field="*{firstName}" type="input" name="firstName" class="form-control" id="inputFirstName" placeholder="Enter First Name" maxlength="20" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLastName">Last Name</label>
+            <input th:field="*{lastName}" type="input" name="lastName" class="form-control" id="inputLastName" placeholder="Enter Last Name" maxlength="20" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputUsername">Username</label>
+            <input th:field="*{username}" type="input" name="username" class="form-control" id="inputUsername" placeholder="Enter Username" maxlength="20" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword">Password</label>
+            <input th:field="*{password}" type="password" name="password" class="form-control" id="inputPassword" placeholder="Enter Password" maxlength="20" required>
+          </div>
+        </div>
+        <button id="signup-submit" type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+      <p th:if="${error}">Invalid Credentials</p>
+    </div>
+  </body>
+</html>

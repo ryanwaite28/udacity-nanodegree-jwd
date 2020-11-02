@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/styles.css}">
+
+    <title>Results</title>
+  </head>
+  <body class="bg-light text-black">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">
+        <!--        <img src="/bin/img/app-logo.png" width="30" height="30" class="transition rotating d-inline-block align-top" alt="">-->
+        SuperDuperDrive
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div th:if="${theUserIsLoggedIn}" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav" id="user-main-nav">
+          <a class="nav-item nav-link" href="/logout" id="logoutLink">Log Out</a>
+        </div>
+      </div>
+      <div th:unless="${theUserIsLoggedIn}" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav" id="user-main-nav">
+          <a class="nav-item nav-link" href="/login">Log In</a>
+          <a class="nav-item nav-link" href="/signup">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container justify-content-center p-3" style="background-color: #eeeeee; margin-top: 5em;">
+      <div class="text-center">
+        <h1 class="display-5" th:if="${noteCreateSuccess}">
+          Note Created Successfully!
+        </h1>
+        <h1 class="display-5" th:if="${noteUpdateSuccess}">
+          Note Updated Successfully!
+        </h1>
+        <h1 class="display-5" th:if="${noteDeleteSuccess}">
+          Note Deleted Successfully!
+        </h1>
+        <h1 class="display-5" th:if="${fileUploadSuccess}">
+          File Uploaded Successfully!
+        </h1>
+        <h1 class="display-5" th:if="${fileDeleteSuccess}">
+          File Deleted Successfully!
+        </h1>
+        <h1 class="display-5" th:if="${credentialCreateSuccess}">
+          Credential Created Successfully!
+        </h1>
+        <h1 class="display-5" th:if="${credentialUpdateSuccess}">
+          Credential Updated Successfully!
+        </h1>
+        <h1 class="display-5" th:if="${credentialDeleteSuccess}">
+          Credential Deleted Successfully!
+        </h1>
+      </div>
+      <p class="text-center"><a href="/home">Home</a></p>
+    </div>
+  </body>
+</html>
