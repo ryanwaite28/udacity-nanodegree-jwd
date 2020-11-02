@@ -8,7 +8,7 @@ Why take this Nanodegree program?
 <br/>
 Java has been one of the most popular programming languages in the world for over 20 years, and most Fortune 500 companies rely on Java for their back-end architecture. In this program, you’ll learn to build, test, and deploy back-end infrastructure(s) using Java, and complete real-world projects to share with current or prospective employers to demonstrate mastery of the skills that are in high-demand at a wide range of companies. According to Glassdoor, Java developers had some of the fastest growing salaries in 2018
 
-- Udacity.com
+-- <a href="http://udacity.com/">Udacity.com</a>
 </blockquote>
 
 ![Nanodegree-Certification](nd-grad-cert-jwd.png)
